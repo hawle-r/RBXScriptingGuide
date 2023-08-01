@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notepad📚</title>
+  <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+  <input type="text" id="textField" placeholder="<Write your note...>">
+  <div id="notes-container"></div>
+  <strong><i>P.S do not refresh after you have written everything down (It clears all)</i></strong>
+  <img src="sound_off.png" id="soundButtonOn" class="sound-button" style="display: block; width: 50px; height: 50px;">
+  <img src="sound_on.png" id="soundButtonOff" class="sound-button" style="display: none; width: 50px; height: 50px;">
+  
+  <!-- Background music -->
+  <audio id="backgroundMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  
+  
+  <script>
+    // JavaScript function to toggle sound on/off
+    function toggleSound() {
+      var audio = document.getElementById("backgroundMusic");
+  
+      // Check if the audio is paused
+      if (audio.paused) {
+        audio.play();
+        document.getElementById("soundButtonOn").style.display = "none";
+        document.getElementById("soundButtonOff").style.display = "block";
+      } else {
+        audio.pause();
+        document.getElementById("soundButtonOn").style.display = "block";
+        document.getElementById("soundButtonOff").style.display = "none";
+      }
+    }
+  
+    // Attach the click event to the sound button images
+    document.getElementById("soundButtonOn").addEventListener("click", toggleSound);
+    document.getElementById("soundButtonOff").addEventListener("click", toggleSound);
+  </script>
+  <script src="notes.js"></script>
+</body>
+</html>
+
+  

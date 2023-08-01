@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RBXScriptGuide</title>
+  <audioautoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+    </audioautoplay>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+    .google-doc {
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/P2ECl-mLmvY" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/04MgkKVJdVc" frameborder="5" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="google-doc">
+    <a href="https://docs.google.com/document/d/1wmNBrMXXp-dl8QuWDmcbWlAgUE5QJJCIbLRZp8Vm3qQ/view" target="_blank">Click here to view the Google Document✋</a>
+
+  </div>
+<!-- Sound button images -->
+<!-- Sound button images -->
+<img src="sound_off.png" id="soundButtonOn" class="sound-button" style="display: block; width: 50px; height: 50px;">
+<img src="sound_on.png" id="soundButtonOff" class="sound-button" style="display: none; width: 50px; height: 50px;">
+
+<!-- Background music -->
+<audio id="backgroundMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+<script>
+  // JavaScript function to toggle sound on/off
+  function toggleSound() {
+    var audio = document.getElementById("backgroundMusic");
+
+    // Check if the audio is paused
+    if (audio.paused) {
+      audio.play();
+      document.getElementById("soundButtonOn").style.display = "none";
+      document.getElementById("soundButtonOff").style.display = "block";
+    } else {
+      audio.pause();
+      document.getElementById("soundButtonOn").style.display = "block";
+      document.getElementById("soundButtonOff").style.display = "none";
+    }
+  }
+
+  // Attach the click event to the sound button images
+  document.getElementById("soundButtonOn").addEventListener("click", toggleSound);
+  document.getElementById("soundButtonOff").addEventListener("click", toggleSound);
+</script>
+
+
+  
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated wavy text</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+  <div class="animated-text">
+    <span style="--i:1">&nbsp</span>
+    <span style="--i:1">&nbsp</span>
+    <span style="--i:1">I</span>
+    <span style="--i:2">n</span>
+    <span style="--i:3">t</span>
+    <span style="--i:4">r</span>
+    <span style="--i:5">o</span>
+    <span style="--i:6">d</span>
+    <span style="--i:7">u</span>
+    <span style="--i:8">c</span>
+    <span style="--i:9">t</span>
+    <span style="--i:10">i</span>
+    <span style="--i:11">o</span>
+    <span style="--i:12">n</span>
+    <span style="--i:13">&nbsp</span>
+    <span style="--i:13">&nbsp</span>
+    <span style="--i:14">t</span>
+    <span style="--i:15">o</span>
+    <span style="--i:16">&nbsp</span>
+    <span style="--i:16">&nbsp</span>
+    <span style="--i:17">R </span>
+    <span style="--i:18">o </span>
+    <span style="--i:19">b </span>
+    <span style="--i:20">l </span>
+    <span style="--i:21">o </span>
+    <span style="--i:22">x </span>
+    <span style="--i:23">&nbsp</span>
+    <span style="--i:23">&nbsp</span>
+    <span style="--i:24">S </span>
+    <span style="--i:25">c </span>
+    <span style="--i:26">r </span>
+    <span style="--i:27">i </span>
+    <span style="--i:28">p </span>
+    <span style="--i:29">t </span>
+    <span style="--i:30">i </span>
+    <span style="--i:31">n </span>
+    <span style="--i:32">g </span>
+    <span style="--i:32">🫵 </span>
+  </div>
+      <div class="container">
+      <h2 class="object" data-value="3"><br><span></span></h2>
+      <img src="1.png" class="object" data-value="-10" alt="">
+    </div>
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(move){
+
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }
+    
+
+    </script>
+  </body>
+</html>
+</body>
+
+</html>
+
+  <div class="lua-guide">
+    <p>Welcome to the comprehensive step-by-step guide on Lua scripting in Roblox Studio. This guide aims to cover the essentials, intermediate concepts, and best practices for creating interactive games using Lua scripting language.</p>
+    <h3>1. Introduction to Lua Scripting in Roblox Studio</h3>
+    <p>Lua is a lightweight, powerful scripting language widely used in Roblox Studio for game development. Its simple syntax and versatility make it an excellent choice for creating interactive elements and implementing game logic. The code written in Lua is executed on both the client and server, ensuring a synchronized and seamless experience for all players.</p>
+    <p>In Roblox Studio, Lua scripts can be placed in various objects, such as Parts, Models, and Script instances. By interacting with the game environment and manipulating objects, events, and game data, Lua scripts play a crucial role in shaping the gameplay and overall user experience.</p>
+
+    <h3>2. Scripting Basics</h3>
+    <p>Before delving into more complex concepts, let's review the fundamental aspects of Lua scripting:</p>
+    <ul>
+      <li><strong>Variables and Data Types:</strong> Variables are essential building blocks in any programming language. In Lua, they can hold various data types, including numbers, strings, booleans, and tables. By using the 'local' keyword, you can declare variables with a specific scope within the script.</li>
+      <pre><code>local playerName = "John"
+local playerScore = 100
+local isPlaying = true</code></pre>
+      <li><strong>Conditional Statements:</strong> Conditional statements enable your script to make decisions based on specific conditions. 'if', 'else', and 'elseif' statements allow you to control the flow of your code, executing different actions accordingly.</li>
+      <pre><code>if playerScore >= 100 then
+  print("You are a high scorer!")
+elseif playerScore >= 50 then
+  print("Not bad! Keep going!")
+else
+  print("You can do better!")
+end</code></pre>
+      <li><strong>Loops:</strong> Loops are used to repeat a block of code multiple times, enabling you to perform tasks more efficiently. Lua provides 'for' and 'while' loops to handle various scenarios.</li>
+      <pre><code>for i = 1, 5 do
+  print("Iteration " .. i)
+end
+
+local count = 1
+while count <= 5 do
+  print("Count: " .. count)
+  count = count + 1
+end</code></pre>
+<li><strong>Functions:</strong> Functions are fundamental building blocks in Lua that allow you to encapsulate a set of actions or computations into a reusable block of code. They play a crucial role in breaking down complex tasks into manageable chunks and promoting code organization.</li>
+
+<p>A function in Lua is created using the 'function' keyword, followed by the function name, a list of parameters (if any), and the function body enclosed in 'end'. Here's the general syntax of a function:</p>
+<pre><code>function functionName(param1, param2, ...)
+-- Function body: code to be executed
+end</code></pre>
+
+<p>Functions can take zero or more parameters (inputs), and they can return zero or more values (outputs). Parameters are variables that hold the values passed to the function when it is called, and they act as placeholders for the input data.</p>
+
+<p>When you call a function, you provide arguments as values for the parameters. The values you pass will be used by the function to perform its tasks. Here's an example of a simple function that adds two numbers and returns the result:</p>
+<pre><code>function addNumbers(a, b)
+local result = a + b
+return result
+end
+
+local sum = addNumbers(5, 10) -- Call the function with arguments 5 and 10
+print("Sum:", sum) -- Output: Sum: 15</code></pre>
+
+<p>Functions can return one or more values using the 'return' statement. In Lua, you can return multiple values, which is a powerful feature for packing and unpacking data efficiently. Here's an example of a function that calculates the sum and difference of two numbers:</p>
+<pre><code>function calculateSumAndDifference(a, b)
+local sum = a + b
+local difference = a - b
+return sum, difference
+end
+
+local s, d = calculateSumAndDifference(10, 5) -- Call the function with arguments 10 and 5
+print("Sum:", s) -- Output: Sum: 15
+print("Difference:", d) -- Output: Difference: 5</code></pre>
+
+<p>Furthermore, functions can be used to perform specific tasks without returning any value. In such cases, the function is often called for its side effects. For example, a function might display a message, update a variable, or interact with other parts of the game environment:</p>
+<pre><code>function greetPlayer(playerName)
+print("Hello, " .. playerName .. "!")
+end
+
+greetPlayer("John") -- Output: Hello, John!</code></pre>
+
+<p>One important aspect of functions is their scope, which determines where a function and its variables are accessible. Functions can be global or local. Global functions are accessible from anywhere in the script, while local functions are only accessible within the block of code where they are defined. In general, it is good practice to create local functions unless they need to be accessed from multiple parts of the script.</p>
+
+<p>Functions can be assigned to variables, which allows you to pass functions as arguments to other functions or return them as results. This concept is known as "first-class functions," and it is useful for implementing advanced programming patterns such as functional programming.</p>
+
+<p>In Lua, functions can also be anonymous, meaning they have no name. Anonymous functions, also known as "lambda functions" or "closures," can be useful when you need a function for a short-lived task or as a callback for event handling. Here's an example of an anonymous function:</p>
+<pre><code>local myFunction = function(param)
+print("Received parameter:", param)
+end
+
+myFunction("Hello, world!") -- Output: Received parameter: Hello, world!</code></pre>
+
+<p>Understanding functions and mastering their usage will significantly enhance your ability to create complex and well-organized scripts. By breaking down your code into smaller, modular functions, you can improve code readability, maintainability, and reusability, ultimately resulting in more efficient and scalable game development in Roblox Studio.</p>
+
+      <li><strong>Tables:</strong> Tables are Lua's powerful data structure, allowing you to store multiple values in a single variable. Tables can contain various data types and even other tables, making them versatile for handling complex data.</li>
+      <pre><code>local playerData = {
+  name = "John",
+  score = 100,
+  inventory = {"Sword", "Shield"}
+}
+
+print(playerData.name) -- Output: John</code></pre>
+    </ul>
+
+    <h3>3. Intermediate Concepts</h3>
+    <p>As you progress, you'll encounter more intermediate concepts that extend the capabilities of your Lua scripts:</p>
+    <ul>
+        <h3>Using pairs() to Iterate Over Key-Value Pairs in a Table</h3>
+        <p>In Lua, a table is a versatile data structure that can store multiple values associated with unique keys. When you need to process each element in a table and access both its key and value, you can use the `pairs()` function.</p>
+        
+        <p>The `pairs()` function is used to iterate over the key-value pairs of a table. It returns two values for each iteration: the key and its corresponding value. The key represents the index or identifier used to access the value in the table, and the value is the data stored at that key.</p>
+        
+        <p>Here's the general syntax for using `pairs()` in a `for` loop:</p>
+        <pre><code>local myTable = {a = 1, b = 2, c = 3}
+        
+        for key, value in pairs(myTable) do
+          -- Process each key-value pair
+          print("Key:", key, "Value:", value)
+        end</code></pre>
+        
+        <p>Let's take an example table called `myTable`, which contains three key-value pairs: "a" with the value 1, "b" with the value 2, and "c" with the value 3. When we use the `pairs()` function in a `for` loop, it iterates over each key-value pair in the table, and in each iteration, the `key` variable will hold the current key, and the `value` variable will hold the corresponding value.</p>
+        
+        <p>During the first iteration, `key` will be "a" and `value` will be 1. During the second iteration, `key` will be "b" and `value` will be 2, and so on, until all key-value pairs in the table have been processed.</p>
+        
+        <p>Let's see the output of the loop:</p>
+        <pre><code>Key: a Value: 1
+        Key: b Value: 2
+        Key: c Value: 3</code></pre>
+        
+        <p>Using `pairs()` allows you to perform various operations on the elements of a table, such as calculations, manipulations, or printing their values, based on both the keys and their corresponding values.</p>
+      <li><strong>Events and Event Handlers:</strong> <!-- Explanation of Events and Event Handlers in Lua -->
+        <h3>Events and Event Handlers in Roblox Studio</h3>
+        <p>In Roblox Studio, events and event handlers are fundamental concepts that play a crucial role in creating interactive gameplay and user interfaces. Events allow your scripts to respond to specific actions or occurrences in the game, such as a button click, a player joining the game, or a character taking damage. Event handlers are functions that you register to be executed when a specific event occurs.</p>
+        
+        <p>Event-driven programming is an essential paradigm in game development, as it allows your game to respond dynamically to player input and changes in the game world.</p>
+        
+        <h4>Understanding Events</h4>
+        <p>An event is a signal that indicates something has happened in the game. For example, a button press is an event, a player joining the game is an event, and even a timer reaching zero can be considered an event. In Roblox Studio, events are associated with objects or instances in the game, such as buttons, players, or characters.</p>
+        
+        <p>When an event occurs, Roblox Studio sends out a signal to all connected event handlers, letting them know that the event has happened. The event handlers, in turn, execute their associated functions in response to the event.</p>
+        
+        <h4>Connecting Event Handlers</h4>
+        <p>To respond to an event, you need to create a function that defines what should happen when the event occurs. This function is called the event handler. You then connect the event handler to the event using the `Connect()` method. This tells Roblox Studio that the event handler should be executed whenever the event happens.</p>
+        
+        <p>Here's a general outline of how to connect an event handler to an event:</p>
+        <pre><code>local button = script.Parent -- Assume script is inside a button object
+        button.MouseButton1Click:Connect(function()
+          -- Code to execute when the button is clicked
+          print("Button clicked!")
+        end)</code></pre>
+        
+        <p>In this example, we assume that the script is placed inside a button object in Roblox Studio. When the button's `MouseButton1Click` event occurs (i.e., the left mouse button is clicked on the button), the function provided in the `Connect()` method will be executed. The function simply prints "Button clicked!" to the output, but you can perform any desired action in response to the button click.</p>
+        
+        <h4>Using Event Parameters</h4>
+        <p>Some events may provide additional information or data when they occur. For example, a `TouchEnded` event on a part may provide the position where the touch ended. To access this data, you can define parameters in your event handler function. When the event occurs, Roblox Studio will automatically pass the relevant data to your event handler through these parameters.</p>
+        
+        <p>Here's an example of using parameters in an event handler for a `TouchEnded` event:</p>
+        <pre><code>local part = game.Workspace.Part -- Assume there's a part in the workspace
+        part.Touched:Connect(function(otherPart)
+          -- Code to execute when the part is touched
+          print("Part touched by:", otherPart.Name)
+        end)</code></pre>
+        
+        <p>In this example, the `Touched` event of the `part` object occurs when another part touches it in the game world. The event handler function takes a parameter named `otherPart`, which represents the part that touched the original part. When the event happens, the name of the touching part is printed to the output.</p>
+        
+        <h4>Disconnecting Event Handlers</h4>
+        <p>Sometimes, you may want to stop an event handler from responding to an event. This can be useful when certain conditions are met, and you no longer want the event handler to execute.</p>
+        
+        <p>To disconnect an event handler, you can use the `Disconnect()` method. This detaches the event handler from the event, ensuring that it will not be executed when the event occurs.</p>
+        <pre><code>local button = script.Parent
+        local connection = nil
+        
+        -- Function to execute when the button is clicked
+        local function onButtonClicked()
+          print("Button clicked!")
+          connection:Disconnect() -- Disconnect the event handler after the first click
+        end
+        
+        -- Connect the event handler and store the connection in the 'connection' variable
+        connection = button.MouseButton1Click:Connect(onButtonClicked)</code></pre>
+        
+        <p>In this example, the event handler `onButtonClicked` is connected to the `MouseButton1Click` event of the `button` object. When the button is clicked, the function will be executed, printing "Button clicked!" to the output. Additionally, the `connection:Disconnect()` line inside the event handler will disconnect the event handler after the first click, so it will no longer respond to subsequent clicks on the button.</p>
+        
+        <h4>Using Custom Events</h4>
+        <p>While Roblox Studio provides built-in events for many objects and components, you can also create custom events to trigger specific actions or behaviors in your game. Custom events allow you to extend the functionality of your game and provide a flexible way to communicate between different parts of your game. To create a custom event, you can use the `Instance.new()` method to create a `BindableEvent` or a `RemoteEvent`, depending on your needs.</p>
+        
+        <p>Here's an example of creating and firing a custom event:</p>
+        <pre><code>local myEvent = Instance.new("BindableEvent")
+        
+        -- Connect a function to the custom event
+        myEvent.Event:Connect(function()
+          print("Custom event fired!")
+        end)
+        
+        -- Fire the custom event
+        myEvent:Fire() -- Output: Custom event fired!</code></pre>
+        
+        <p>In this example, we create a new `BindableEvent` called `myEvent`. We then connect an event handler function to the `Event` property of the `BindableEvent`. When the custom event is fired using `myEvent:Fire()`, the event handler function will be executed, printing "Custom event fired!" to the output.</p>
+        
+        <p>Using custom events enables you to implement complex interactions, create modular systems, and enhance the interactivity of your game in a more organized manner.</p>
+        
+        <p>Events and event handlers are foundational concepts in Roblox Studio that enable you to create dynamic, engaging gameplay experiences for players. By understanding how to use events and event handlers effectively, you can implement various features and mechanics in your game, making it more interactive, immersive, and enjoyable for players.</p>
+        <!-- More explanation or examples can be added if needed -->
+        
+      <li><strong>Modules:</strong> <!-- Explanation of Modules in Lua -->
+        <h4>Modules: Organizing Your Code Into Reusable Components</h4>
+        <p>Modules provide a powerful way to organize your code into reusable and self-contained components. A module is a separate Lua script that contains functions, variables, and other code that can be easily included in other scripts. By creating modules, you can avoid code duplication, improve code organization, and promote code reusability.</p>
+        
+        <p>To create a module, simply define your functions and variables in a separate Lua script and save it as a .lua file. In other scripts, you can use the `require()` function to load the module and access its contents. This allows you to use the functions and variables defined in the module within your other scripts, as if they were defined locally.</p>
+        
+        <p>Here's a simple example of a module that defines a function to calculate the square of a number:</p>
+        <pre><code> square.lua (Module)
+        local function calculateSquare(number)
+          return number * number
+        end
+        
+        return calculateSquare</code></pre>
+        
+        <pre><code> main.lua
+        local squareModule = require(game.ServerScriptService.square)
+        local result = squareModule(5) -- Call the function from the module
+        print("Square of 5:", result) -- Output: Square of 5: 25</code></pre>
+        
+        <p>In this example, we have a module named `square.lua` that defines the `calculateSquare()` function. The function calculates the square of a given number. In the `main.lua` script, we use `require()` to load the module, and then we can call the `calculateSquare()` function from the module as if it were defined locally in the `main.lua` script.</p>
+        
+        <p>Using modules promotes a modular approach to scripting, making your code easier to maintain and understand. By breaking down your code into smaller, reusable components, you can improve collaboration with other developers and create more efficient and organized projects in Roblox Studio.</p></li>
+        </div>
+<div class="anchor">
+  <a href="notes.html"target="_blank">Need help remembering all that? Click <strong>Here</strong>, <i>just dont refresh when you've written everything down😅</i></a>
+</div>   
